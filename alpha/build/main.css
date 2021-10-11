@@ -1,0 +1,42 @@
+ body {
+     background-color: blanchedalmond;
+ }
+
+ .wrapper {
+     margin: 0 auto;
+ }
+
+ .container {
+     margin: 2rem;
+     padding: 3rem;
+     background-color: white;
+ }
+
+ .btn {
+     background: #07294D;
+     border: unset;
+     border-radius: 5px;
+     padding: .5rem;
+     display: block;
+     margin: 0 auto;
+ }
+
+.btn-text {
+    color: white;
+}
+
+.send-icon {
+    width: 50%;
+}
+
+ @media only screen and (min-width: 50rem) {
+     .wrapper {
+         width: 80%;
+     }
+ }
+
+ @media only screen and (min-width: 90rem) {
+    .wrapper {
+        width: 70%;
+    }
+}
