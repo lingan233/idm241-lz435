@@ -1,42 +1,117 @@
+ * {
+     font-family: "Roboto", sans-serif;
+     box-sizing: border-box;
+ }
+
+ h1 {
+     text-align: center;
+     padding-bottom: 4rem;
+ }
+
+ li {
+     line-height: 1.5rem;
+     margin-bottom: 1rem;
+ }
+
  body {
-     background-color: blanchedalmond;
+     background-color: rgb(176, 218, 205);
  }
 
  .wrapper {
      margin: 0 auto;
+     
  }
 
  .container {
-     margin: 2rem;
+     margin: 1rem;
      padding: 3rem;
      background-color: white;
+     border-radius: 5px;
+     transition: .35s;
  }
 
  .btn {
      background: #07294D;
      border: unset;
      border-radius: 5px;
-     padding: .5rem;
      display: block;
-     margin: 0 auto;
+     margin: 2rem auto;
+     height: 2.5rem;
+     width: 6rem;
  }
 
-.btn-text {
-    color: white;
-}
+ .btn-items {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
-.send-icon {
-    width: 50%;
-}
+ .btn-text {
+     color: white;
+     padding: .5rem;
+     font-weight: 500;
+ }
+
+ @keyframes shrink {
+     0% {}
+     100% {
+         height: .75rem;
+         width: 4rem;
+     }
+ }
+
+ @keyframes enlarge {
+     0% {}
+     100% {
+         height: 2.75rem;
+         width: 6.5rem;
+     }
+ }
+
+ .btn:hover {
+     animation: enlarge;
+     animation-duration: .25s;
+     animation-fill-mode: forwards;
+ }
+
+ .btn:focus {
+     animation-name: shrink;
+     animation-duration: .5s;
+     animation-fill-mode: forwards;
+ }
+
+ .btn:focus .btn-items {
+     opacity: 0%;
+     transition: .25s;
+ }
+
+ .content-text {
+     display: flex;
+     flex-wrap: wrap;
+ }
 
  @media only screen and (min-width: 50rem) {
      .wrapper {
-         width: 80%;
+         width: 95%;
+     }
+     .container {
+         padding: 3rem 4rem;
+         margin: 1.5rem;
+     }
+     .topic {
+         width: 40%;
+         padding: 2rem 0;
+     }
+     .content-text {
+         justify-content: space-around;
      }
  }
 
  @media only screen and (min-width: 90rem) {
-    .wrapper {
-        width: 70%;
-    }
-}
+     .wrapper {
+         width: 87.5%;
+     }
+     .topic {
+         width: 20%;
+     }
+ }
