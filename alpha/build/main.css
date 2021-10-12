@@ -38,6 +38,7 @@
      margin: 2rem auto;
      height: 2.5rem;
      width: 6rem;
+     cursor: pointer;
  }
 
  .btn-items {
@@ -78,6 +79,7 @@
      animation-name: shrink;
      animation-duration: .5s;
      animation-fill-mode: forwards;
+     cursor: default;
  }
 
  .btn:focus .btn-items {
@@ -109,7 +111,7 @@
 
  @media only screen and (min-width: 90rem) {
      .wrapper {
-         width: 87.5%;
+         width: 90%;
      }
      .topic {
          width: 20%;
