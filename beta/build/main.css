@@ -1,0 +1,286 @@
+/* ----------General------------ */
+
+@import 'normalize.css';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+li {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: rgb(176, 184, 218);
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.container {
+    margin: 1rem;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    transition: .35s;
+}
+
+.content-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ----------Button------------ */
+
+.btn {
+    background: #07294D;
+    border: unset;
+    border-radius: 5px;
+    display: block;
+    margin: 2rem auto;
+    height: 2.5rem;
+    width: 6rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text {
+    color: white;
+    padding: .5rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+@keyframes shrink {
+    0% {}
+    100% {
+        height: .75rem;
+        width: 4rem;
+    }
+}
+
+@keyframes shorten {
+    0% {}
+    100% {
+        width: 2rem;
+    }
+}
+
+@keyframes enlarge {
+    0% {}
+    100% {
+        height: 2.75rem;
+        width: 6.5rem;
+    }
+}
+
+.btn:hover {
+    animation: enlarge;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+}
+
+.btn:focus {
+    /* animation-name: shrink;
+    animation-duration: .5s;
+    animation-fill-mode: forwards; */
+    animation: shrink .5s forwards, shorten .5s 1s forwards;
+    cursor: default;
+}
+
+.btn:focus .btn-items {
+    opacity: 0%;
+    transition: .25s;
+}
+
+.btn:hover .btn-items {
+    padding-top: .25rem;
+    transition: .25s;
+}
+
+/* ---------Beta------------- */
+
+.envelope {
+    opacity: 0;
+    /* background-color: white;
+    border-radius: 8px; */
+    transform: rotate(-45deg);
+    display: block;
+    margin: 2rem auto;
+    position: relative;
+    left: 2rem;
+    top: -7rem;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    0% {}
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes move-left-down {
+    0% {}
+    50% {
+        left: 0rem;
+    }
+    100% {
+        left: -.5rem;
+        top: -2.7rem;
+    }
+}
+
+.white-space {
+    background-color: white;
+    display: block;
+    padding: 2rem;
+    margin: -2rem auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* .interaction {
+    background-color: royalblue;
+    width: 15rem;
+    display: block;
+    margin: 0 auto;
+} */
+
+.btn:focus .envelope {
+    animation: fade-in .25s forwards, rotate .5s forwards, move-left-down .75s forwards;
+    animation-delay: .5s;
+}
+
+.dots {
+    position: relative;
+    padding: .2rem;
+    width: .2rem;
+    border-radius: 99px;
+    display: block;
+    margin: 0 auto;
+    background-color: #07294D;
+    top: -5rem;
+    opacity: 0;
+}
+
+.btn:focus #dot0 {
+    animation: move-up-less .35s 1s forwards, fade-out .5s 1s forwards;
+    animation-timing-function: ease-out;
+}
+
+.btn:focus #dot1 {
+    animation: move-up .35s 1s forwards, fade-out .5s 1s forwards;
+    animation-timing-function: ease-out;
+}
+
+.btn:focus #dot2 {
+    animation: move-up-less .35s 1s forwards, move-right .35s 1s forwards, fade-out .5s 1s forwards;
+    animation-timing-function: ease-out;
+}
+
+.btn:focus #dot3 {
+    animation: move-up .35s 1s forwards, move-left .35s 1s forwards, fade-out .5s 1s forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes move-right {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 1rem;
+    }
+}
+
+@keyframes move-left {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -1.5rem;
+    }
+}
+
+@keyframes move-up {
+    0% {}
+    100% {
+        top: -12rem;
+    }
+}
+
+@keyframes move-up-less {
+    0% {}
+    100% {
+        top: -11rem;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ---------Responsive------------- */
+
+@media only screen and (min-width: 50rem) {
+    .wrapper {
+        width: 95%;
+    }
+    .container {
+        padding: 3rem 4rem;
+        margin: 1.5rem;
+    }
+    .topic {
+        width: 40%;
+        padding: 2rem 0;
+    }
+    .content-text {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .wrapper {
+        width: 90%;
+    }
+    .topic {
+        width: 20%;
+    }
+}
