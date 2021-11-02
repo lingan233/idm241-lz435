@@ -40,6 +40,10 @@ body {
     flex-wrap: wrap;
 }
 
+.topic {
+    width: 100%;
+}
+
 /* ----------Button------------ */
 
 .btn {
@@ -59,6 +63,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.send-icon {
+    width: 1.2rem;
+    z-index: 111;
 }
 
 .btn-text {
@@ -98,9 +107,6 @@ body {
 }
 
 .btn:focus {
-    /* animation-name: shrink;
-    animation-duration: .5s;
-    animation-fill-mode: forwards; */
     animation: shrink .5s forwards, shorten .5s 1s forwards;
     cursor: default;
 }
@@ -115,12 +121,32 @@ body {
     transition: .25s;
 }
 
-/* ---------Beta------------- */
+.blue-space {
+    height: .75rem;
+    width: 4rem;
+    background: #07294D;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    position: relative;
+    top: -10.05rem;
+    left: -.4rem;
+    z-index: 20;
+}
+
+.btn:focus .blue-space {
+    animation: shrink .5s forwards, shorten .5s 1s forwards, fade-in .4s forwards;
+}
+
+/* .interaction {
+    margin-bottom: -3rem;
+} */
+
+/* ---------Envelope and Dots------------- */
 
 .envelope {
     opacity: 0;
-    /* background-color: white;
-    border-radius: 8px; */
     transform: rotate(-45deg);
     display: block;
     margin: 2rem auto;
@@ -166,15 +192,8 @@ body {
     z-index: 2;
 }
 
-/* .interaction {
-    background-color: royalblue;
-    width: 15rem;
-    display: block;
-    margin: 0 auto;
-} */
-
 .btn:focus .envelope {
-    animation: fade-in .25s forwards, rotate .5s forwards, move-left-down .75s forwards;
+    animation: fade-in .25s forwards, rotate .6s forwards, move-left-down .9s forwards;
     animation-delay: .5s;
 }
 
@@ -191,22 +210,22 @@ body {
 }
 
 .btn:focus #dot0 {
-    animation: move-up-less .35s 1s forwards, fade-out .5s 1s forwards;
+    animation: move-up-less .4s 1s forwards, fade-out .5s 1s forwards;
     animation-timing-function: ease-out;
 }
 
 .btn:focus #dot1 {
-    animation: move-up .35s 1s forwards, fade-out .5s 1s forwards;
+    animation: move-up .4s 1s forwards, fade-out .5s 1s forwards;
     animation-timing-function: ease-out;
 }
 
 .btn:focus #dot2 {
-    animation: move-up-less .35s 1s forwards, move-right .35s 1s forwards, fade-out .5s 1s forwards;
+    animation: move-up-less .4s 1s forwards, move-right .4s 1s forwards, fade-out .5s 1s forwards;
     animation-timing-function: ease-out;
 }
 
 .btn:focus #dot3 {
-    animation: move-up .35s 1s forwards, move-left .35s 1s forwards, fade-out .5s 1s forwards;
+    animation: move-up .4s 1s forwards, move-left .4s 1s forwards, fade-out .5s 1s forwards;
     animation-timing-function: ease-out;
 }
 
@@ -256,6 +275,7 @@ body {
         opacity: 0;
     }
 }
+
 
 /* ---------Responsive------------- */
 
