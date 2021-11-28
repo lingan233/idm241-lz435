@@ -1,0 +1,230 @@
+/* ----------General------------ */
+
+@import 'normalize.css';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+li {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: rgb(147, 177, 211);
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.container {
+    margin: 1rem;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    transition: .35s;
+}
+
+.content-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topic {
+    width: 100%;
+}
+
+img {
+    max-width: 75%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.topic img {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+
+
+/* ---------BUILD------------- */
+
+.build-window {
+    width: 960px;
+    height: 620px;
+    background: #141414;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-top: .5rem;
+    overflow: hidden;
+}
+
+.menu {
+    color: #fff;
+    height: 45px;
+    padding: 5px;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    position: relative;
+}
+
+.menu * {
+    margin: 1rem 2rem;
+}
+
+.menu h2 {
+    color: #6bbdcf;
+    margin-right: 36rem;
+}
+
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+.menu-btn-spin:hover {
+    transform: rotate(-360deg);
+    transition: transform .6s;
+}
+
+.menu-txt {
+    margin-top: 1.5rem;
+    margin-right: 0;
+}
+
+.line {
+    background: #fff;
+    display: block;
+    width: 40px;
+    height: 5px;
+    float: right;
+    clear: right;
+    margin: 5px 0;
+}
+
+.hid {
+    transform: rotateZ(225deg);
+    transition: all .2s ease;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    margin: 20px 0 0 0;
+}
+
+.hid.animate {
+    background: #fff;
+    transform: rotateZ(315deg);
+    transition: all .25s ease .2s;
+}
+
+.second {
+    transform: rotateZ(0deg);
+    transition: all .5s ease;
+    background: #fff;
+}
+
+.second.animate {
+    transform: rotateZ(225deg);
+    transition: all .5s ease;
+}
+
+.first,
+.third {
+    transition: all .5s ease-out;
+}
+
+.third {
+    left: 0;
+    float: left;
+}
+
+.first.animate,
+.third.animate {
+    width: 0;
+    transition: all .3s ease-out;
+}
+
+.slideout {
+    width: 320px;
+    height: 630px;
+    background: #115868;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    list-style: none;
+    padding-top: 7rem;
+    margin-top: 0;
+    /* margin-left: 43rem; */
+}
+
+.slideout li {
+    color: #fff;
+    padding: 19px;
+    /* border-bottom: thin solid #333; */
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.active {
+    font-size: 2rem;
+}
+
+
+/* ---------Responsive------------- */
+
+@media only screen and (min-width: 50rem) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .container {
+        padding: 3rem 4rem;
+        margin: 1.5rem;
+    }
+
+    .topic {
+        width: 40%;
+        padding: 2rem 0;
+    }
+
+    .content-text {
+        justify-content: space-around;
+    }
+
+    .topic img {
+        margin: -1rem 0;
+    }
+}
+
+@media only screen and (min-width: 95rem) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .topic {
+        width: 20%;
+    }
+}
