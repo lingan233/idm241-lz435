@@ -57,6 +57,6 @@ $(document).ready(function () {
         $('.active').removeClass('active')
         // add active class to clicked element
         $(this).addClass('active');
+        $('.content-txt').html($('.active').text() + ' PAGE');
     });
-
 });

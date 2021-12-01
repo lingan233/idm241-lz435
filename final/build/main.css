@@ -11,7 +11,6 @@
 
 h1 {
     text-align: center;
-    padding-bottom: 4rem;
 }
 
 li {
@@ -90,7 +89,8 @@ img {
 
 .menu h2 {
     color: #6bbdcf;
-    margin-right: 36rem;
+    margin-right: 32.5rem;
+    font-size: 2rem;
 }
 
 .menu-btn {
@@ -192,6 +192,11 @@ img {
     font-size: 2rem;
 }
 
+.content-txt {
+    color: white;
+    display: block;
+    margin: 4rem;
+}
 
 /* ---------Responsive------------- */
 
