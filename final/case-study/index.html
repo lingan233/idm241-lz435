@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM241 - Final Case Study</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <img src="hero.png" alt="hero img">
+
+        <div class="container">
+            <h1>IDM241 - Final Case Study</h1>
+        </div>
+
+        <div class="container">
+            <h2>The Overview</h2>
+            <p>This project took an overall span of 4 weeks to complete as the final project of the class IDM 241. The
+                project focused on the code quality and simplicity and as well as the quality of the micro-interaction.
+            </p>
+        </div>
+
+        <div class="container">
+            <h2 id="context-and-challenge">Context and Challenge</h2>
+            <h3 id="background-">Background:</h3>
+            <ul>
+                <li>Taken Web Design I, II, and Scripting for IDM I</li>
+                <li>Creating this project for the IDM 241 Micro interaction class</li>
+                <li>Want to do an interesting hamburger menu</li>
+                <li>Researched on Dribbble and CodePen for inspiration</li>
+            </ul>
+            <h3 id="description-">Description:</h3>
+            <p>This is a hamburger menu micro-interaction on a desktop view</p>
+            <h3 id="timeline-">Timeline:</h3>
+            <ul>
+                <li>Week 6-7 working on what final micro-interaction to do, researching, work on final description</li>
+                <li>Week 8-9 working building the final</li>
+                <li>Week 10 getting feedbacks and revise</li>
+            </ul>
+            <h3 id="purpose-">Purpose:</h3>
+            <ul>
+                <li>Class Project</li>
+            </ul>
+            <h3 id="the-problem-">The Problem:</h3>
+            <ul>
+                <li>Non-working javascript example</li>
+                <li>Need to self-taught jQuery to figure out CodePen example code</li>
+                <li>Figured out jquery using w3school and others</li>
+            </ul>
+            <h3 id="goals-objectives-">Goals &amp; Objectives:</h3>
+            <ul>
+                <li>A smooth micro-interaction with clean code</li>
+                <li>The final product should be fun, entertaining, and useful </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h2 id="process-and-insight">Process and Insight</h2>
+            <h3 id="designs">Designs</h3>
+            <ul>
+                <li>Designed using Figma</li>
+                <li>Taken inspirations from current designs</li>
+                <li>Described the micro-interaction using Trigger, Rules, Feedbacks, Loops&Modes</li>
+            </ul>
+            <div class="example">
+                <h3>Example Description</h3>
+                <div class="content-text">
+                    <div class="topic">
+                        <h4>Trigger</h4>
+                        <ul>
+                            <li>Click on the area that includes the hamburger menu button and the text “Menu”</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <h4>Rules</h4>
+                        <ul>
+                            <li>A menu modal showed up from the top right corner of the screen</li>
+                            <li>The background of the menu slides out from the right</li>
+                            <li>The middle line of the hamburger menu button rotates clockwise 405 degrees</li>
+                            <li>The top and bottom line of the hamburger menu disappear after the middle line of the
+                                hamburger pass over them</li>
+                            <li>Another line fade in perpendicular to the middle line forming an X</li>
+                            <li>The menu items fade in</li>
+                            <li>The menu text fade out quickly</li>
+                            <li>The close text fade in quickly</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <h4>Feedbacks</h4>
+                        <ul>
+                            <li>A menu modal showed up from the top right corner of the screen</li>
+                            <li>The background of the menu slides out from the right</li>
+                            <li>The middle line of the hamburger menu button rotates clockwise 405 degrees</li>
+                            <li>The top and bottom line of the hamburger menu disappear after the middle line of the
+                                hamburger pass over them</li>
+                            <li>Another line fade in perpendicular to the middle line forming an X</li>
+                            <li>The menu items fade in</li>
+                            <li>The menu text fade out quickly</li>
+                            <li>The close text fade in quickly</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <h4>Loops & Modes</h4>
+                        <ul>
+                            <li>No loops</li>
+                            <li>There will be a menu modal close mode and a menu modal open mode. The menu modal close
+                                mode
+                                is the default. The menu open mode will be carried out by clicking on the hamburger
+                                menu.
+                                The menu close mode will be restored by clicking on the close button</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://linganzheng.com/idm241/final/build/" target="_blank"><button>READ MORE</button></a>
+            </div>
+
+            <h3 id="code-dev">Code/Dev</h3>
+            <ul>
+                <li>The menu open and close part is taken from code pen</li>
+                <li>Select and deselect option are figured out through googling</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h2>The Solution</h2>
+            <div class="build-window">
+                <div class="menu">
+                    <h2>REAL WEBSITE</h2>
+                    <span class="menu-txt">Menu</span>
+                    <a class="menu-btn">
+                        <span class="line first"></span>
+                        <span class="line second"></span>
+                        <span class="line hid"></span>
+                        <span class="line third"></span>
+                    </a>
+                </div>
+                <ul class="slideout">
+                    <li class="active">HOME</li>
+                    <li>PRODUCTS</li>
+                    <li>BENEFITS</li>
+                    <li>ABOUT</li>
+                    <li>FAQ</li>
+                    <li>CONTACT</li>
+                </ul>
+                <h3 class="content-txt">HOME PAGE</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 id="the-results">The Results</h2>
+            <p>The goals of a smooth micro-interaction with clean code and being fun and useful at the same time are
+                met. </p>
+            <h3 id="lessons-learned-">Lessons learned:</h3>
+            <ul>
+                <li>jQuery can be a lot easier than traditional Javascript</li>
+                <li>Being descriptive on triggers, rules, feedback, loops&amp; modes is important</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
